@@ -1,6 +1,8 @@
 <h1>Edit your grams here</h1>
 
+<%= @gram.inspect %>
+
 <%= simple_form_for @gram do |f| %>
-  <%= f.message %>
+  <%= f.input :message %>
   <%= f.submit %>
 <% end %>
