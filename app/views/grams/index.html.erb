@@ -1,3 +1,14 @@
-<div class='col-10 offset-1' >
-  <h1>it works</h1> 
+<h1>Grams!</h1>
+
+<% @grams.each do |gram| %>
+<div>
+  <%= gram.message %>
+  <% if !gram.picture.url.nil? %>
+    <br/>
+    <%= image_tag gram.picture.url %>
+  <% else %>
+    <br/>
+    <%= 'There is no picture for this gram.' %>
+  <% end %>
 </div>
+<% end %>
